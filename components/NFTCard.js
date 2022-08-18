@@ -4,12 +4,13 @@ import React from 'react'
 
 import { COLORS, SIZES, SHADOWS, assets } from '../constants';
 import { CircleButton, ReactButton } from './Button';
+import { SubInfo, EthPrice, NFTTitle } from './SubInfo';
 
 const NFTCard = ({ data }) => {
   const navigation = useNavigation();
   return (
     <View style={{
-      // backgroundColor: COLORS.white,
+      backgroundColor: COLORS.white,
       borderRadius: SIZES.font,
       marginBottom: SIZES.extraLarge,
       margin: SIZES.base,
@@ -22,12 +23,13 @@ const NFTCard = ({ data }) => {
           style={{
             width: "100%",
             height: "100%",
-            borderRadius: SIZES.font
+            borderTopLeftRadius: SIZES.font,
+            borderTopRightRadius: SIZES.font
           }}
         />
         <CircleButton imgUrl={assets.heart} right={10} top={10} />
-        {/* <Text>{data.id}</Text> */}
       </View>
+      <SubInfo />
     </View>
   )
 }
