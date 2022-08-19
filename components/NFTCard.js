@@ -1,10 +1,10 @@
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, FlatList } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import React from 'react'
 
 import { COLORS, SIZES, SHADOWS, assets } from '../constants';
 import { CircleButton, ReactButton } from './Button';
-import { SubInfo, EthPrice, NFTTitle } from './SubInfo';
+import { SubInfo, EthPrice, EndDate, NFTTitle } from './SubInfo';
 
 const NFTCard = ({ data }) => {
   const navigation = useNavigation();
@@ -14,7 +14,9 @@ const NFTCard = ({ data }) => {
       borderRadius: SIZES.font,
       marginBottom: SIZES.extraLarge,
       margin: SIZES.base,
-      ...SHADOWS.dark
+      ...SHADOWS.dark,
+      // width: "100%",
+      height: 400
     }}>
       <View style={{ width: "100%", height: 250 }}>
         <Image
@@ -28,8 +30,55 @@ const NFTCard = ({ data }) => {
           }}
         />
         <CircleButton imgUrl={assets.heart} right={10} top={10} />
+
       </View>
-      <SubInfo />
+      <View style={{
+        position: 'absolute',
+        left: 0,
+        bottom: 130,
+        width: '100%',
+        height: 48,
+        // backgroundColor: '#4287f5'
+      }}>
+          <FlatList
+            data={data.bids}
+            renderItem={({ item }) => <SubInfo data={item} />}
+            keyExtractor={(item) => item.id}
+            showsVerticalScrollIndicator={false}
+            horizontal
+          />
+          <EndDate />
+      </View>
+      {/* <SubInfo
+        people={data.bids}
+      /> */}
+
+      <View style={{
+        width: "100%",
+        padding: SIZES.font,
+        marginTop: SIZES.large
+      }}>
+          <NFTTitle
+            title={data.name}
+            subTitle={data.creator}
+            titleSize={SIZES.large}
+            subTitleSize={SIZES.font}
+          />
+
+          <View style={{
+            marginTop: SIZES.font,
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            alignItems: 'center'
+          }}>
+            <EthPrice price={data.price} />
+            <ReactButton
+              minWidth={120}
+              fontSize={SIZES.font}
+              handlePress={() => navigation.navigate('Details', { data })}
+            />
+          </View>
+      </View>
     </View>
   )
 }
