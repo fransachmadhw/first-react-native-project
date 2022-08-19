@@ -88,7 +88,7 @@ export const EndDate = () => {
   )
 }
 
-export const SubInfo = ({ data }) => {
+export const SubInfo = ({ photo }) => {
   return (
     <View style={{
       width: '100%',
@@ -105,7 +105,7 @@ export const SubInfo = ({ data }) => {
         // backgroundColor: COLORS.secondary,
       }}>
         <Image
-          source={data.image}
+          source={photo}
           resizeMode='contain'
           style={{
             height: 48, width: 48,

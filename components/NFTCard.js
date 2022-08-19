@@ -40,13 +40,7 @@ const NFTCard = ({ data }) => {
         height: 48,
         // backgroundColor: '#4287f5'
       }}>
-          <FlatList
-            data={data.bids}
-            renderItem={({ item }) => <SubInfo data={item} />}
-            keyExtractor={(item) => item.id}
-            showsVerticalScrollIndicator={false}
-            horizontal
-          />
+          <SubInfo photo={data.photo} />
           <EndDate />
       </View>
       {/* <SubInfo
