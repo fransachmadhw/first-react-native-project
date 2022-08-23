@@ -13,7 +13,7 @@ const NFTCard = ({ data }) => {
       backgroundColor: COLORS.white,
       borderRadius: SIZES.font,
       marginBottom: SIZES.extraLarge,
-      margin: SIZES.base,
+      margin: SIZES.font,
       ...SHADOWS.dark,
       // width: "100%",
       height: 400
