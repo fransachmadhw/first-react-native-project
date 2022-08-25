@@ -2,7 +2,7 @@ import { View, Text, SafeAreaView, Image, StatusBar, FlatList } from 'react-nati
 import React from 'react';
 
 import { COLORS, SIZES, FONTS, SHADOWS, assets } from '../constants';
-import { CircleButton, ReactButton, FocusedStatusBar, DetailsDesc, DetailsBid } from '../components';
+import { CircleButton, ReactButton, FocusedStatusBar, DetailsDesc, DetailsBid, ArrowButton } from '../components';
 import { SubInfo, EthPrice, EndDate, NFTTitle } from '../components/SubInfo';
 
 const DetailsHeader = ({ data, navigation }) => (
@@ -13,7 +13,7 @@ const DetailsHeader = ({ data, navigation }) => (
       style={{ width: '100%', height: '100%' }}
     />
 
-    <CircleButton
+    <ArrowButton
       imgUrl={assets.left}
       handlePress={() => navigation.goBack()}
       left={15}
@@ -21,7 +21,7 @@ const DetailsHeader = ({ data, navigation }) => (
     />
 
     <CircleButton
-      imgUrl={assets.heart}
+      // imgUrl={assets.heart}
       // handlePress={() => navigation.goBack()}
       right={15}
       top={StatusBar.currentHeight + 10}

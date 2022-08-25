@@ -1,6 +1,8 @@
 import badge from "../assets/icons/badge.png";
 import eth from "../assets/icons/eth.png";
 import heart from "../assets/icons/heart.png";
+import heartLine from "../assets/icons/heart-line.png";
+import heartSolid from "../assets/icons/heart-solid.png";
 import left from "../assets/icons/left.png";
 import search from "../assets/icons/search.png";
 
@@ -22,6 +24,8 @@ export default {
   badge,
   eth,
   heart,
+  heartLine,
+  heartSolid,
   left,
   search,
 

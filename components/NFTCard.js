@@ -1,4 +1,4 @@
-import { View, Text, Image, FlatList } from 'react-native';
+import { TouchableOpacity, Pressable, View, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import React from 'react'
 
@@ -8,16 +8,24 @@ import { SubInfo, EthPrice, EndDate, NFTTitle } from './SubInfo';
 
 const NFTCard = ({ data }) => {
   const navigation = useNavigation();
+  const [pressed, setPressed] = React.useState(false);
+
   return (
-    <View style={{
+    <Pressable style={{
       backgroundColor: COLORS.white,
       borderRadius: SIZES.font,
       marginBottom: SIZES.extraLarge,
       margin: SIZES.font,
       ...SHADOWS.dark,
       // width: "100%",
-      height: 400
-    }}>
+      height: 400,
+      transform: [{ scale: pressed ? 1 : 1 }]
+      }}
+      // onPressIn={() => setPressed(true)}
+      // onPressOut={() => setPressed(true)}
+      onPress={() => navigation.navigate('Details', { data })}
+      // activeOpacity={0.5}
+    >
       <View style={{ width: "100%", height: 250 }}>
         <Image
           source={data.image}
@@ -29,7 +37,7 @@ const NFTCard = ({ data }) => {
             borderTopRightRadius: SIZES.font
           }}
         />
-        <CircleButton imgUrl={assets.heart} right={10} top={10} />
+        <CircleButton right={10} top={10} />
 
       </View>
       <View style={{
@@ -73,7 +81,7 @@ const NFTCard = ({ data }) => {
             />
           </View>
       </View>
-    </View>
+    </Pressable>
   )
 }
 
