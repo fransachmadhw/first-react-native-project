@@ -1,8 +1,9 @@
 {
   "expo": {
-    "name": "first-react-native-project",
-    "slug": "first-react-native-project",
+    "name": "NFT Marketplace",
+    "slug": "nft-marketplace",
     "version": "1.0.0",
+    "owner": "fransachmadhw",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
