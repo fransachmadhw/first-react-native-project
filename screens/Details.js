@@ -37,7 +37,7 @@ const Details = ({ route, navigation }) => {
       <FocusedStatusBar
         barStyle='dark-content'
         backgroundColor='transparent'
-        translucent={true}
+        // translucent={true}
       />
 
       <View style={{
