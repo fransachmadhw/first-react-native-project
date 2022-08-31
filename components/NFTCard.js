@@ -19,7 +19,7 @@ const NFTCard = ({ data }) => {
       ...SHADOWS.dark,
       // width: "100%",
       height: 400,
-      transform: [{ scale: pressed ? 1 : 1 }]
+      // transform: [{ scale: pressed ? 1 : 1 }]
       }}
       // onPressIn={() => setPressed(true)}
       // onPressOut={() => setPressed(true)}

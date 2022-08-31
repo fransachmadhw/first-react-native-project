@@ -5,6 +5,10 @@ import heartLine from "../assets/icons/heart-line.png";
 import heartSolid from "../assets/icons/heart-solid.png";
 import left from "../assets/icons/left.png";
 import search from "../assets/icons/search.png";
+import cc from "../assets/icons/cc.png";
+import profile from "../assets/icons/user.png";
+import cog from "../assets/icons/cog.png";
+import logOut from "../assets/icons/log-out.png";
 
 import logo from "../assets/images/logo.png";
 import nft01 from "../assets/images/nft01.jpg";
@@ -28,6 +32,10 @@ export default {
   heartSolid,
   left,
   search,
+  cc,
+  profile,
+  cog,
+  logOut,
 
   logo,
   nft01,

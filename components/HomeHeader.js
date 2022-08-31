@@ -15,7 +15,8 @@ const HomeHeader = ({ onSearch }) => {
       <View style={{
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginTop: SIZES.large
       }}>
         <Image
           source={assets.logo}

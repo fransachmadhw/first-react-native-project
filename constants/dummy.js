@@ -127,7 +127,7 @@ const NFTData = [
     description:
       "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural.",
     image: assets.nft05,
-    photo: assets.person03,
+    photo: assets.person02,
     bids: [
       {
         id: "BID-51",
