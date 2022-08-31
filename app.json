@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "owner": "fransachmadhw",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/images/person01.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -19,16 +19,23 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fransachmadhw.nftmarketplace"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.fransachmadhw.nftmarketplace"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7d5c05eb-c911-4443-8fc5-b5e69df9bb17"
+      }
     }
   }
 }
